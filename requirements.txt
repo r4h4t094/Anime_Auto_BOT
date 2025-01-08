@@ -8,7 +8,8 @@ aiofiles
 apscheduler==3.10.1
 feedparser
 https://github.com/New-dev0/Telethon/archive/platy.zip
-pyrogram==2.0.102
+#pyrogram==2.0.102
+pyrofork
 tgcrypto
 AnilistPython==0.1.3
 anitopy
