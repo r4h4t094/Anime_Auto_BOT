@@ -10,8 +10,6 @@
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 #    General Public License for more details.
 #
- .
-
 # if you are using this following code then don't forgot to give proper
 # credit to t.me/r4h4t_69 
 
