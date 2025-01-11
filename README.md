@@ -89,9 +89,9 @@
 
 ## Deployment In VPS
 
-- `git clone https://github.com/kaif-00z/AutoAnimeBot.git`
+- `git clone https://github.com/r4h4t094/Anime_Auto_BOT.git`
 
-- `nano .env` configure env as per [this](https://github.com/kaif-00z/AutoAnimeBot/blob/main/.sample.env) or  using [this](https://github.com/kaif-00z/AutoAnimeBot/blob/main/auto_env_gen.py).
+- `nano .env` configure env as per [this](https://github.com/r4h4t094/Anime_Auto_BOT/blob/main/.sample.env) or  using [this](https://github.com/r4h4t094/Anime_Auto_BOT/blob/main/auto_env_gen.py).
 
 - `sudo docker build . -t ongoing` (make sure to install docker first using `sudo apt install docker.io`)
 
